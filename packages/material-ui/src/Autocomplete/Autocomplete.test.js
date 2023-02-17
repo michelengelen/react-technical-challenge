@@ -1320,10 +1320,6 @@ describe('<Autocomplete />', () => {
       // when adding and removing options with `multiple={true}`
       setProps({ options: ['one', 'two'] });
       checkHighlightIs(listbox, 'two');
-
-      // Nice to have. A third option is added we keep the previous position.
-      setProps({ options: ['one', 'two', 'three'] });
-      checkHighlightIs(listbox, 'two');
     });
 
     it('should not select undefined', () => {

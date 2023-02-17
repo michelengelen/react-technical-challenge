@@ -509,9 +509,8 @@ export default function useAutocomplete(props) {
     // Ignore filteredOptions (and options, getOptionSelected, getOptionLabel) not to break the scroll position
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    // Only sync the highlighted index when the option switch between empty and not
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    filteredOptions.length === 0,
+    // Only sync the highlighted index when the length of the options change
+    filteredOptions.length,
     // Don't sync the highlighted index with the value when multiple
     // eslint-disable-next-line react-hooks/exhaustive-deps
     multiple ? false : value,
